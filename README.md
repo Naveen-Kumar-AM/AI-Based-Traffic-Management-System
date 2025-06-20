@@ -100,3 +100,14 @@ By default, the app runs at http://localhost:5000. Open it in your browser to us
 
 ### Live Preview (Optional):
    - Extend support for camera streams by modifying the Flask route and frontend `#livePreview` logic.
+
+
+## Authors
+
+- **Naveen Kumar M** 
+- **Thanika M**
+- **Muthu Selvan B**
+
+## Contributing
+
+This project is open for further improvements, suggestions, and collaboration. Feel free to fork the repository, open issues, or submit pull requests.
