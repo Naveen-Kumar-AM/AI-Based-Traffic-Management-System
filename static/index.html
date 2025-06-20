@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Traffic Management System</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js" defer></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Traffic Management System</h1>
+
+    <!-- Drag & Drop Upload -->
+    <div class="upload-area" id="uploadArea">
+      <p>Drag & drop your video here or click to select a file</p>
+      <input type="file" id="videoUpload" accept="video/*" required style="display: none;" />
+    </div>
+
+    <!-- Detection Steps -->
+    <div class="steps">
+      <div id="step1" class="step"><span>1</span> Upload</div>
+      <div id="step2" class="step"><span>2</span> Helmet Detection</div>
+      <div id="step3" class="step"><span>3</span> Vehicle Detection</div>
+      <div id="step4" class="step"><span>4</span> ANPR Detection</div>
+    </div>
+
+    <!-- Live Feed -->
+    <div class="video-wrapper">
+      <div class="video-box">
+        <div class="video-title">Live Detection Preview</div>
+        <div class="live-preview-container">
+          <img id="livePreview" alt="Live Feed" />
+          <div id="liveFallback" class="live-fallback">Waiting for live feed...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+    </div>
+
+    <!-- Video Previews -->
+    <div class="video-wrapper" id="videoContainer" style="display: none;">
+      <div class="video-box">
+        <div class="video-title">Input Video</div>
+        <video id="videoPreview" controls></video>
+      </div>
+      <div class="video-box">
+        <div class="video-title">Processed Video</div>
+        <video id="processedVideo" controls></video>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="buttons">
+      <button id="analyzeButton">Analyze</button>
+      <button id="cancelButton">Cancel</button>
+    </div>
+
+    <a id="downloadLink" class="download-link" href="#" download style="display:none;">Download Processed Video</a>
+    <div id="status" class="status"></div>
+  </div>
+</body>
+</html>
